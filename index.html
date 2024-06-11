@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="LLaMA-VStream: Memory-Based Real-Time Understanding for Long Video Streams">
+  <meta name="keywords" content="LLaMA-VStream">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LLaMA-VStream: Memory-Based Real-Time Understanding for Long Video Streams</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.ico"> -->
+  <!-- <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">LLaMA-VStream: Memory-Based Real-Time Understanding for Long Video
+              Streams</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://zhang9302002.github.io/">Haoji Zhang </a><sup>1 *</sup>,</span>
+              <span class="author-block">
+                <a href="https://github.com/InvincibleWyq/">Yiqin Wang</a><sup>1 *</sup>,</span>
+              <span class="author-block">
+                <a href="https://andytang15.github.io/">Yansong Tang </a><sup>1 &dagger;</sup>,</span>
+              <span class="author-block">
+                <a href="https://yongliu20.github.io/">Yong Liu</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://sites.google.com/site/jshfeng/home">Jiashi Feng</a><sup>2</sup>,</span>
+              <span class="author-block">
+                <a href="https://jifengdai.org/">Jifeng Dai</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com.sg/citations?user=OEZ816YAAAAJ&hl=en">Xiaojie
+                  Jin</a><sup>2 &dagger;&Dagger;</sup></span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Tsinghua University,</span>
+              <span class="author-block"><sup>2</sup>ByteDance Inc.</span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>*</sup>Equal contribution,</span>
+              <span class="author-block"><sup>&dagger;</sup>Corresponding authors,</span>
+              <span class="author-block"><sup>&Dagger;</sup>Project lead.</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/TO_BE_DONE" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <span class="link-block">
+                  <a href="https://www.youtube.com/watch?v=TO_BE_DONE"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/zhang9302002/LLaMA-VStream"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- <span class="link-block">
+
+                  <a href="BLOG_WEB_LINK"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-google"></i>
+                    </span>
+                    <span>Blogpost</span>
+                  </a>
+
+                  <a href="HUGGINGFACE_DEMO_LINK" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-rocket"></i>
+                    </span>
+                    <span>Demo</span>
+                  </a>
+
+                </span> -->
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- <div class="content has-text-centered">
+    <img src="./static/images/teaser2.png" alt="LLaMA-VStream Teaser" width="50%">
+  </div> -->
+
+  <div class="content has-text-centered">
+    <img src="./static/images/teaser2.png" alt="LLaMA-VStream Teaser" width="40%">
+    <figcaption>
+      <strong>Comparing
+        <span style="color: ForestGreen;">(a) conventional offline pipeline</span> and
+        <span style="color: #ca6924;">(b) human processing pipeline</span> </br> with
+        <span style="color: #177cb0;">(c) our proposed LLaMA-VStream for online video streaming understanding.</span>
+      </strong>
+    </figcaption>
+  </div>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Benefiting from the advancements in large language models and cross-modal alignment, existing multi-modal
+              video understanding methods have achieved prominent performance in offline scenario. However, online video
+              streams, as one of the most common media forms in the real world, have seldom received attention. Compared
+              to offline videos, the ``dynamic'' nature of online video streams poses challenges for the direct
+              application of existing models and introduces new problems, such as the storage of extremely long-term
+              information, interaction between continuous visual content and ``asynchronous'' user questions.
+              Therefore, in this paper we present LLaMA-VStream, a video-language model that simulates the memory
+              mechanism of human. Our model is able to process extremely long video streams in real-time and respond to
+              user queries simultaneously.
+              Compared to existing models, LLaMA-VStream achieves significant reductions in inference latency and VRAM
+              consumption, which is intimately related to performing understanding of online streaming video.
+              In addition, given that existing video understanding benchmarks predominantly concentrate on offline
+              scenario, we propose VStream-QA, a novel question answering benchmark specifically designed for online
+              video streaming understanding. Comparisons with popular existing methods on the proposed benchmark
+              demonstrate the superiority of our method for such challenging setting. To verify the generalizability of
+              our approach, we further evaluate it on existing video understanding benchmarks and achieves
+              state-of-the-art performance in offline scenarios as well.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+      <!-- Paper video. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Video</h2>
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/watch?v=TO_BE_DONE" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <!--/ Paper video. -->
+    </div>
+  </section>
+
+
+
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <!-- Main text. -->
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3 has-text-centered">Pipeline</h2>
+
+          <div class="content has-text-justified">
+            <p>
+            </p>
+          </div>
+          <div class="content has-text-centered">
+            <img src="./static/images/overall_framework.png" alt="Pipeline" width="100%">
+            <figcaption>
+              <strong>The overview of LLaMA-VStream framework for real-time online video stream understanding.</strong>
+              LLaMA-VStream is executed by two processes, namely 'frame handle' and 'question handler'. The frame
+              handler is responsible for encoding frames and writing to memory, which contains a visual encoder, a STAR
+              memory and a feature buffer. The question handler is responsible for reading from memory and answering
+              questions anytime, which contains a projector and a Large Language Model.
+            </figcaption>
+
+          </div>
+
+          <h2 class="title is-3 has-text-centered">Results</h2>
+
+          <div class="content has-text-centered">
+            <img src="./static/images/performance1.png" alt="Results" width="80%">
+          </div>
+
+          <div class="content has-text-centered">
+            <img src="./static/images/performance2.png" alt="Results" width="80%">
+          </div>
+
+          <h2 class="title is-3 has-text-centered">Benchmark</h2>
+
+          <div class="content has-text-centered">
+            <img src="./static/images/benchmark.png" alt="Results" width="80%">
+          </div>
+
+          <h2 class="title is-3 has-text-centered">Case Study</h2>
+
+          <div class="content has-text-centered">
+            <img src="./static/images/case_study.png" alt="Results" width="80%">
+            <figcaption>
+              <strong>Comparison of different video LLMs on VStream-QA-Movie.</strong> </br>
+              In this movie, a policeman pulls over a vehicle driven by a couple, but they point a gun at the policeman
+              and kill him. </br>
+              Our <span style="color: #177cb0;">LLaMA-VStream</span> is the only model that successfully
+              understands the theme of this long movie clip.
+            </figcaption>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{llamavstream,
+      title={LLaMA-VStream: Memory-Based Real-Time Understanding for Long Video Streams},
+      author={TO BE DONE},
+      journal={arXiv preprint arXiv:TO BE DONE},
+      year={2024}
+}</code></pre>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content has-text-centered">
+            <p>
+              &copy; Yiqin Wang 2024. Adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
