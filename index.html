@@ -3,10 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="LLaMA-VStream: Memory-Based Real-Time Understanding for Long Video Streams">
-  <meta name="keywords" content="LLaMA-VStream">
+  <meta name="description" content="Flash-VStream: Memory-Based Real-Time Understanding for Long Video Streams">
+  <meta name="keywords" content="Flash-VStream">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LLaMA-VStream: Memory-Based Real-Time Understanding for Long Video Streams</title>
+  <title>Flash-VStream: Memory-Based Real-Time Understanding for Long Video Streams</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -47,7 +47,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">LLaMA-VStream: Memory-Based Real-Time Understanding for Long Video
+            <h1 class="title is-1 publication-title">Flash-VStream: Memory-Based Real-Time Understanding for Long Video
               Streams</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
@@ -100,7 +100,7 @@
                 </span>
                 <!-- Code Link. -->
                 <span class="link-block">
-                  <a href="https://github.com/zhang9302002/LLaMA-VStream"
+                  <a href="https://github.com/zhang9302002/Flash-VStream"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -137,17 +137,13 @@
   </section>
 
 
-  <!-- <div class="content has-text-centered">
-    <img src="./static/images/teaser2.png" alt="LLaMA-VStream Teaser" width="50%">
-  </div> -->
-
   <div class="content has-text-centered">
-    <img src="./static/images/teaser2.png" alt="LLaMA-VStream Teaser" width="40%">
+    <img src="./static/images/teaser2.png" alt="Flash-VStream Teaser" width="40%">
     <figcaption>
       <strong>Comparing
         <span style="color: ForestGreen;">(a) conventional offline pipeline</span> and
         <span style="color: #ca6924;">(b) human processing pipeline</span> </br> with
-        <span style="color: #177cb0;">(c) our proposed LLaMA-VStream for online video streaming understanding.</span>
+        <span style="color: #177cb0;">(c) our proposed Flash-VStream for online video streaming understanding.</span>
       </strong>
     </figcaption>
   </div>
@@ -162,7 +158,7 @@
           <div class="content has-text-justified">
             <p>
               <strong>
-                We proposed <span style="color: #177cb0;">LLaMA-VStream</span>, a video-language model that simulates
+                We proposed <span style="color: #177cb0;">Flash-VStream</span>, a video-language model that simulates
                 the memory mechanism of human.
                 Our model is able to process extremely long video streams in real-time and respond to user queries
                 simultaneously.
@@ -188,10 +184,10 @@
               to offline videos, the ``dynamic'' nature of online video streams poses challenges for the direct
               application of existing models and introduces new problems, such as the storage of extremely long-term
               information, interaction between continuous visual content and ``asynchronous'' user questions.
-              Therefore, in this paper we present LLaMA-VStream, a video-language model that simulates the memory
+              Therefore, in this paper we present Flash-VStream, a video-language model that simulates the memory
               mechanism of human. Our model is able to process extremely long video streams in real-time and respond to
               user queries simultaneously.
-              Compared to existing models, LLaMA-VStream achieves significant reductions in inference latency and VRAM
+              Compared to existing models, Flash-VStream achieves significant reductions in inference latency and VRAM
               consumption, which is intimately related to performing understanding of online streaming video.
               In addition, given that existing video understanding benchmarks predominantly concentrate on offline
               scenario, we propose VStream-QA, a novel question answering benchmark specifically designed for online
@@ -238,8 +234,8 @@
           <div class="content has-text-centered">
             <img src="./static/images/overall_framework.png" alt="Pipeline" width="100%">
             <figcaption>
-              <strong>The overview of LLaMA-VStream framework for real-time online video stream understanding.</strong>
-              LLaMA-VStream is executed by two processes, namely 'frame handle' and 'question handler'. The frame
+              <strong>The overview of Flash-VStream framework for real-time online video stream understanding.</strong>
+              Flash-VStream is executed by two processes, namely 'frame handle' and 'question handler'. The frame
               handler is responsible for encoding frames and writing to memory, which contains a visual encoder, a STAR
               memory and a feature buffer. The question handler is responsible for reading from memory and answering
               questions anytime, which contains a projector and a Large Language Model.
@@ -266,12 +262,12 @@
           <h2 class="title is-3 has-text-centered">Case Study</h2>
 
           <div class="content has-text-centered">
-            <img src="./static/images/case_study.png" alt="Results" width="80%">
+            <img src="./static/images/case_study_flash.png" alt="Results" width="80%">
             <figcaption>
               <strong>Comparison of different video LLMs on VStream-QA-Movie.</strong> </br>
               In this movie, a policeman pulls over a vehicle driven by a couple, but they point a gun at the policeman
               and kill him. </br>
-              Our <span style="color: #177cb0;">LLaMA-VStream</span> is the only model that successfully
+              Our <span style="color: #177cb0;">Flash-VStream</span> is the only model that successfully
               understands the theme of this long movie clip.
             </figcaption>
           </div>
@@ -285,8 +281,8 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@article{llamavstream,
-      title={LLaMA-VStream: Memory-Based Real-Time Understanding for Long Video Streams},
+      <pre><code>@article{Flashvstream,
+      title={Flash-VStream: Memory-Based Real-Time Understanding for Long Video Streams},
       author={TO BE DONE},
       journal={arXiv preprint arXiv:TO BE DONE},
       year={2024}
